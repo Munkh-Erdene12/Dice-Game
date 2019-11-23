@@ -19,23 +19,30 @@ var roundScore = 0;
  ***шоо аль талаарай буусаныг хадаглах хувьсагч хадаглах 1-6 гэсэн утыг хувсагчид санамсаргүйгээр үүсэж өгнө
  **********************************************************************************************************/
 
-var dice = Math.floor(Math.random() * 6) + 1;
+var diceNumber = Math.floor(Math.random() * 6) + 1;
+console.log(diceNumber);
 
-/**********************************************************************************
- ***DOM хандалд
- *********************************************************************************/
+/*********************************************************************************************************
+ ***DOM хандалд олон DOM бичвэл tree болно querySelector# байж болно харин илүү хурдан гэвэл getElementById
+ *********************************************************************************************************/
 
-window.document.querySelector("#score-0").textContent = "0";
-document.querySelector("#score-1").textContent = "0";
-document.querySelector("#current-1").textContent = "0";
-window.document.querySelector("#current-0").textContent = "0";
+document.getElementById("score-0").textContent = "0";
+document.getElementById("score-1").textContent = "0";
+document.getElementById("current-1").textContent = "0";
+document.getElementById("current-0").textContent = "0";
 
-// document.querySelector(".dice").style.display = "none";
+var diceDom = document.querySelector(".dice");
+diceDom.style.display = "Blcok";
+// Document.querySelector(".dice").src = "dice-" + diceNumber + ".png";
+document.querySelector(".btn-roll").addEventListener("click", function() {
+  var diceNumber = Math.floor(Math.random() * 6) + 1;
+  document.querySelector(".dice").src = "dice-" + diceNumber + ".png";
+});
 
 /**********************************************************************************
  ***мэндилчилгээ
  *********************************************************************************/
 
-var message =
-  "Cайн байна уу \nэнхүү тоглоом анхны туршилт болхоор та бүхэн минь ойлгоорэй.";
-alert(message);
+// var message =
+//   "Cайн байна уу \nэнхүү тоглоом анхны туршилт болхоор та бүхэн минь ойлгоорэй.";
+// alert(message);
