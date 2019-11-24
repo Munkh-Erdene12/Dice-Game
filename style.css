@@ -18,7 +18,7 @@ body {
       rgba(62, 20, 20, 0.4),
       rgba(62, 20, 20, 0.4)
     ),
-    url(back.jpg);
+    url(bg-1.jpg);
   background-size: cover;
   background-position: center;
   font-family: Lato;
@@ -71,7 +71,7 @@ body {
 }
 
 .active {
-  background-color: #f7f7f7;
+  background-color: #eeeded;
 }
 .active .player-name {
   font-weight: 300;
