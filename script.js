@@ -79,7 +79,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
       switchToNextPlayer();
     }
   } else {
-    alert("Та new game товч дарна уу");
+    alert("New Game товч дарна уу");
   }
 });
 
@@ -90,7 +90,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     document.getElementById("score-" + activePlayer).textContent =
       Scorres[activePlayer];
     //Уг тоглогч хожсон эсэхийг шалгах
-    if (Scorres[activePlayer] >= 10) {
+    if (Scorres[activePlayer] >= 100) {
       isnewGame = false;
       //тоглоомыг дуусан төлөвт оруулна.
       //ялагч гэсэн текстийг нэрийх нь оронд гаргана
@@ -105,6 +105,8 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
       //ээлжийг солих
       switchToNextPlayer();
     }
+  } else {
+    alert("New Game товч дарна уу");
   }
 });
 
@@ -130,6 +132,6 @@ document.querySelector(".btn-new").addEventListener("click", newGame);
  ***мэндилчилгээ.
  *********************************************************************************/
 
-var message =
-  "Cайн байна уу \nэнхүү тоглоом анхны туршилт болхоор та бүхэн минь ойлгоорэй.";
-alert(message);
+// var message =
+//   "Cайн байна уу \nэнхүү тоглоом анхны туршилт болхоор та бүхэн минь ойлгоорэй.";
+// alert(message);
